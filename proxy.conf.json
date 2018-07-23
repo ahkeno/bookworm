@@ -1,0 +1,8 @@
+{
+    "/people": {
+      "target": "http://localhost:3000/people",
+      "secure": false,
+      "pathRewrite": {"^/people": ""}
+    }
+    
+  }
