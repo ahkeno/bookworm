@@ -2,7 +2,11 @@
 <div class="search-box">
 	<app-search></app-search>	
 </div>
-<div class="content">
-<!-- Content -->
-
+<div >
+	<!-- if search result avaliable -->
+	<div *ngIf="bookData">
+		<app-cards-component class="search-result-wrapper"[cardData]="bookData"></app-cards-component>
+	</div>	
+	<!-- if search result not avaliable -->
+	<!-- show No Result component -->
 </div>
