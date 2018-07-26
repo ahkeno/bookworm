@@ -1,0 +1,23 @@
+{
+	"books": [
+    { "id": 1,
+     "title": "Learning Javascript Design Patterns",
+      "author": "Addy Osmani "
+    },
+    { "id": 2,
+     "title": "Fire Road: The Napalm Girl's Journey Through the Horrors of War to Faith, Forgiveness, and Peace",
+      "author": "Kim Phuc Phan Thi"
+    }
+  ]
+,
+	"quotes": [
+    { "id": 1,
+     "title": "Do one thing every day that scares you.",
+      "author": "Eleanor Roosevelt"
+    },
+    { "id": 2,
+     "title": "If you refuse to practice run today,it will make harder to practice it tomorrow",
+      "author": "ahkeno"
+    }
+  ]
+}
