@@ -1,8 +1,34 @@
-.mat-card{
-	 width: 40%;
-	 margin: 5px;
-}
+.app-bw{
+	.mat-card{
+	padding: 10px;
+	margin: 10px;
+	}
 .mat-card-title{
+	font-family: 'Roboto', serif;
+	color: #008000;
 	font-size: 32px;
     text-transform: uppercase;
+	}
+.mat-card-content{
+	display: inline-flex;
+    align-items: flex-start;
+
+    img{
+    	width: 13%;
+    	height: auto;
+    	padding-right: 10px;
+    }
+	}	
+
+	.card-tag{
+		border: none;
+	    background: transparent;
+	    vertical-align: center;
+	    /* padding: 0px; */
+	    font-size: 18px;
+	    display: inline-flex;
+	    align-items: flex-start;
+	    line-height: 24px;
+	    margin: 5px 0;
+	}
 }

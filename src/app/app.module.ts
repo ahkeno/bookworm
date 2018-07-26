@@ -1,21 +1,25 @@
 
 import { NgModule } from '@angular/core';
 import { CoreModule }	from './core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule }	from './routes/app.route.module';
 
 import { AppComponent } from './app.component';
 import { DashboardPage } from './modules/dashboard/dashboard.page';
 import { SearchComponent } from './components/searchBox/search-box.component';
-import { CardsComponent } from './components/cards/cards.component';
+import { CardComponent } from './components/card/card.component';
+import { CardListComponent } from './components/card-list/card-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardPage,
     SearchComponent,
-    CardsComponent
+    CardComponent,
+    CardListComponent
   ],
   imports: [
+    HttpClientModule,
     CoreModule,
     AppRoutingModule
   ],

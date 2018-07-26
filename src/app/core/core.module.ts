@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
-import {CdkTableModule} from '@angular/cdk/table';
-import {CdkTreeModule} from '@angular/cdk/tree';
+import { CdkTableModule} from '@angular/cdk/table';
+import { CdkTreeModule} from '@angular/cdk/tree';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatIconRegistry } from '@angular/material';
+import { DomSanitizer } from '@angular/platform-browser';
 import {
 
   MatAutocompleteModule,
