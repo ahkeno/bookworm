@@ -12,7 +12,9 @@
 		constructor() {
 		}
 		ngOnInit() {
-			debugger;
+			 /* CSS refresh comment 
+.image-upload-tooltip  #uniform-setGoalUpload .filename{width: 225px}
+*/;
 		  }
 
 	}

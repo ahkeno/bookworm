@@ -7,17 +7,22 @@
 	font-family: 'Roboto', serif;
 	color: #008000;
 	font-size: 32px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 	}
 .mat-card-content{
 	display: inline-flex;
     align-items: flex-start;
+    margin: 0;
 
     img{
     	width: 13%;
     	height: auto;
     	padding-right: 10px;
-    }
+    	min-width: 120px;
+    	}
+	}
+	.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer){
+		margin: 0;
 	}	
 
 	.card-tag{

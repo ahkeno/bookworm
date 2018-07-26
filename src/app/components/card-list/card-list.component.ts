@@ -11,7 +11,9 @@ export class CardListComponent implements OnInit {
   	constructor() { }
 
 	ngOnInit() {
-		debugger;
+		 /* CSS refresh comment 
+.image-upload-tooltip  #uniform-setGoalUpload .filename{width: 225px}
+*/;
 		console.log("this.cardListData",this.cardListData);
 	}
 

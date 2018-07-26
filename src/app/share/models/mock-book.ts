@@ -2,42 +2,52 @@ import { Book } from './book';
 export const mockBook: Book[] =[
   		{
 	  		bookId: "1",
-		    name: "book1",
-		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		    name: "consectetur adipiscing elit",
+		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
 		    author: "author1",
 		    image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
 		    tag: [
-			    "Biography","Novel"
+			    "Biography","Fiction"
 		    ]
   		},
   		{
 	  		bookId: "2",
-		    name: "book2",
-		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		    name: "ipsum dolor sit amet",
+		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate ",
 		    author: "author2",
 		    image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
 		    tag: [
-			    "Biography","Novel"
+			    "Novel"
 		    ]
   		},
   		{
 	  		bookId: "3",
 		    name: "book1",
-		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
 		    author: "author1",
 		    image: "",
 		    tag: [
-			    "Biography","Novel"
+			    "Non Fiction"
 		    ]
   		},
   		{
 	  		bookId: "4",
-		    name: "book2",
-		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+		    name: "sed do eiusmod tempor",
+		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco  ",
 		    author: "author2",
 		    image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
 		    tag: [
-			    "Biography","Novel"
+			    "Fantasy"
+		    ]
+  		},
+  		{
+	  		bookId: "4",
+		    name: "Ut enim ad minim veniam",
+		    desription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  ",
+		    author: "author2",
+		    image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
+		    tag: [
+			    "Romance"
 		    ]
   		}
   	];
