@@ -1,0 +1,12 @@
+{
+	"books": [
+    { "id": 1,
+     "title": "Learning Javascript Design Patterns",
+      "author": "Addy Osmani "
+    },
+    { "id": 2,
+     "title": "Fire Road: The Napalm Girl's Journey Through the Horrors of War to Faith, Forgiveness, and Peace",
+      "author": "Kim Phuc Phan Thi"
+    }
+  ]
+}
