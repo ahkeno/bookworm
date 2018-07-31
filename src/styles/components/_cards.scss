@@ -1,0 +1,39 @@
+.app-bw{
+	.mat-card{
+	padding: 10px;
+	margin: 10px;
+	}
+.mat-card-title{
+	font-family: 'Roboto', serif;
+	color: #008000;
+	font-size: 32px;
+    text-transform: capitalize;
+	}
+.mat-card-content{
+	display: inline-flex;
+    align-items: flex-start;
+    margin: 0;
+
+    img{
+    	width: 13%;
+    	height: auto;
+    	padding-right: 10px;
+    	min-width: 120px;
+    	}
+	}
+	.mat-card-content>:last-child:not(.mat-card-footer), .mat-card>:last-child:not(.mat-card-footer){
+		margin: 0;
+	}	
+
+	.card-tag{
+		border: none;
+	    background: transparent;
+	    vertical-align: center;
+	    /* padding: 0px; */
+	    font-size: 18px;
+	    display: inline-flex;
+	    align-items: flex-start;
+	    line-height: 24px;
+	    margin: 5px 0;
+	}
+}
