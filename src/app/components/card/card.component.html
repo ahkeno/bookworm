@@ -1,17 +1,17 @@
 <mat-card>
   <mat-card-header >
-    <mat-card-title *ngIf="cardData.name">{{cardData.name}}</mat-card-title>
-    <mat-card-subtitle>by {{cardData.author}}</mat-card-subtitle>
+    <mat-card-title *ngIf="cardData?.name">{{cardData?.name}}</mat-card-title>
+    <mat-card-subtitle>by {{cardData?.author}}</mat-card-subtitle>
   </mat-card-header>
   
   <mat-card-content>
-    <img *ngIf="cardData.image" src={{cardData.image}}>
+    <img *ngIf="cardData?.image" src={{cardData?.image}}>
     <p>
-      {{cardData.desription}}
+      {{cardData?.desription}}
     </p>
   </mat-card-content>
-  <div *ngIf="cardData.tag">
-    <button  *ngFor = "let tag of cardData.tag" class="card-tag">
+  <div *ngIf="cardData?.ag">
+    <button  *ngFor = "let tag of cardData?.tag" class="card-tag">
         <mat-icon svgIcon="labels" class="green-icon"></mat-icon>{{tag}}
     </button>
   </div>

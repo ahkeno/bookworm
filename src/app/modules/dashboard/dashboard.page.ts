@@ -1,20 +1,27 @@
 	import { Component } from '@angular/core';
+	import { Observable, of } from 'rxjs';
 	import { Book } from './../../share/models/book';
-	import { mockBook } from './../../share/models/mock-book';
+	import { BooksService } from './../../share/services/books.service';
+	import { WrappedCollection } from './../../share/services/wrapped.collection';
+	//import { mockBook } from './../../share/models/mock-book';
+
 
 	@Component({
 	  selector: 'app-dashboard',
 	  templateUrl: './dashboard.page.html'
 	})
 	export class DashboardPage {
-		bookList = mockBook;
+		bookList: Observable<WrappedCollection<Book>>;
 
-		constructor() {
+		constructor(
+			private booksService: BooksService
+			) {
+			this.bookList = this.booksService.getAllBooks();
 		}
 		ngOnInit() {
-			 /* CSS refresh comment 
-.image-upload-tooltip  #uniform-setGoalUpload .filename{width: 225px}
-*/;
-		  }
+		
+		}
+		
+		  
 
 	}

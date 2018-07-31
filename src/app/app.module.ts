@@ -10,6 +10,10 @@ import { SearchComponent } from './components/searchBox/search-box.component';
 import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 
+// Service
+
+import { BooksService }from './share/services/books.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +27,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
     CoreModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [ BooksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
