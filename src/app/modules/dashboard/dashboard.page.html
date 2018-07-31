@@ -1,8 +1,11 @@
-
 <div class="search-box">
 	<app-search></app-search>	
 </div>
-<div class="content">
-<!-- Content -->
-
+<div >
+	<!-- if search result avaliable -->
+	<div *ngIf="bookList">
+		<app-card-list [cardListData]="bookList" ></app-card-list>
+	</div>	
+	<!-- if search result not avaliable -->
+	<!-- show No Result component -->
 </div>
