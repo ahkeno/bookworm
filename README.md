@@ -22,6 +22,8 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+Run `ng test --sourceMap=false` without sourcemaps as a workaround
+
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
@@ -35,4 +37,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 -[router] https://stackoverflow.com/questions/40498081/routermodule-forrootroutes-vs-routermodule-forchildroutes
 
 -[folder structure ]https://medium.com/@motcowley/angular-folder-structure-d1809be95542
+
+-[debug in Karma/Jasmine] https://stackoverflow.com/questions/45722256/how-do-i-debug-a-object-errorevent-thrown-error-in-my-karma-jasmine-tests
 

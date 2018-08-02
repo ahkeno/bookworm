@@ -1,52 +1,14 @@
 
-import { TestBed, fakeAsync, tick,async} from '@angular/core/testing';
-import { Component } from '@angular/core';
-import { NgModule } from '@angular/core';
-import { CdkTableModule} from '@angular/cdk/table';
-import { CdkTreeModule} from '@angular/cdk/tree';
-import { BrowserModule } from '@angular/platform-browser';
-import {
-
-  MatAutocompleteModule,
-  MatBadgeModule,
-  MatBottomSheetModule,
-  MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatDividerModule,
-  MatExpansionModule,
-  MatGridListModule,
-  MatIconModule,
-  MatInputModule,
-  MatListModule,
-  MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
-  MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
-  MatSnackBarModule,
-  MatSortModule,
-  MatStepperModule,
-  MatTableModule,
-  MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatTreeModule,
-} from '@angular/material';
-
+import { TestBed, fakeAsync, tick,async,inject} from '@angular/core/testing';
+import { HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { CoreModule } from './../../core/core.module';
+import { HttpClientModule } from '@angular/common/http';
 import { DashboardPage } from './dashboard.page';
 import { SearchComponent } from './../../components/searchBox/search-box.component';
-
+import { CardComponent } from './../../components/card/card.component';
+import { CardListComponent } from './../../components/card-list/card-list.component';
+import { BooksService }from './../../share/services/books.service';
 
 describe('Landing to Dashboard Page ', () => {
   let page: DashboardPage;
@@ -55,55 +17,24 @@ describe('Landing to Dashboard Page ', () => {
   beforeEach(async() =>{
   	 TestBed.configureTestingModule({
   	  imports: [
-  	  	MatAutocompleteModule,
-		MatBadgeModule,
-		MatBottomSheetModule,
-		MatButtonModule,
-		MatButtonToggleModule,
-		MatCardModule,
-		MatCheckboxModule,
-		MatChipsModule,
-		MatDatepickerModule,
-		MatDialogModule,
-		MatDividerModule,
-		MatExpansionModule,
-		MatGridListModule,
-		MatIconModule,
-		MatInputModule,
-		MatListModule,
-		MatMenuModule,
-		MatNativeDateModule,
-		MatPaginatorModule,
-		MatProgressBarModule,
-		MatProgressSpinnerModule,
-		MatRadioModule,
-		MatRippleModule,
-		MatSelectModule,
-		MatSidenavModule,
-		MatSliderModule,
-		MatSlideToggleModule,
-		MatSnackBarModule,
-		MatSortModule,
-		MatStepperModule,
-		MatTableModule,
-		MatTabsModule,
-		MatToolbarModule,
-		MatTooltipModule,
-		MatTreeModule,
-  	  ],
+        CoreModule,HttpClientModule
+      ],
+      providers: [ BooksService,HttpTestingController,HttpClient],
       declarations: [
         DashboardPage,
+        CardListComponent,
         SearchComponent,
-        
+        CardComponent
 		
       ]
     }).compileComponents();
   })
 
-  it(`should create`, async(() => {
-  	const fixture = TestBed.createComponent(DashboardPage);
-    const page = fixture.debugElement.componentInstance;
-    expect(page).toBeTruthy();
-  }));
-
+  it(`should create`, async(inject([HttpTestingController, BooksService],(httpClient: HttpTestingController, booksService: BooksService) => {
+    const fixture = TestBed.createComponent(DashboardPage);
+      const page = fixture.debugElement.componentInstance;
+      expect(booksService).toBeTruthy();	
+    }
+  )));
+  
 });
