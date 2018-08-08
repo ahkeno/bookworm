@@ -1,7 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { DashboardPage } from '../modules/dashboard/dashboard.page';
-
+import { BookPage } from '../modules/book-page/book.page';
 
 const routes: Routes = [
     {
@@ -12,6 +12,10 @@ const routes: Routes = [
     {
         path: 'dashboard',
         component: DashboardPage
+    },
+    {
+        path: 'book/:id',
+        component: BookPage,
     }
     
 ];

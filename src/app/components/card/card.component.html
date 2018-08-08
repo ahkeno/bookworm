@@ -1,4 +1,4 @@
-<mat-card *ngIf="cardData">
+<mat-card *ngIf="cardData" (click)="onCardClick($event,cardData.id)">
   <mat-card-header >
     <mat-card-title *ngIf="cardData.name">{{cardData.name}}</mat-card-title>
     <mat-card-subtitle>by {{cardData.author}}</mat-card-subtitle>

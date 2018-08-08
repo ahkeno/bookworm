@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { MatIconRegistry } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
@@ -12,6 +12,7 @@ import { Book } from './../../share/models/book';
 })
 export class CardComponent implements OnInit {
 
+  @Output() cardClick = new EventEmitter<any>();
   @Input() cardData;
   
   constructor(
@@ -25,6 +26,9 @@ export class CardComponent implements OnInit {
   
   ngOnInit() {
   	
+  }
+  onCardClick(event,id){
+    this.cardClick.next(id);
   }
 
 }

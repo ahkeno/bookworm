@@ -1,0 +1,25 @@
+<div class="card-detail-wrapper" *ngIf="bookData">
+	
+	<div class="detail-info-wrapper">
+		<div class="detail-image">
+			<img src={{bookData.image}}>
+		</div>
+		<div >
+			<div class="mat-card-title">{{bookData.name}}</div>
+			<div class="detail-author">
+				<h3 class="mat-card-subtitle">{{bookData.author}}</h3>
+			</div>
+		</div>
+		
+		<div class="detail-rating">
+			<!-- will be component in future development -->
+			<div>show rating</div>
+		</div>
+	</div>
+	<div class="detail-description">
+		<p>{{bookData.desription}}</p>
+		<!-- will do shore more event in future development -->
+		<button class="button button--showmore">show more</button>
+		 
+	</div>
+</div>
