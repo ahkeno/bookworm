@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,Input,EventEmitter,Output} from '@angular/core';
 
 @Component({
   selector: 'app-new-comment',
@@ -6,13 +6,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewCommentComponent implements OnInit {
 
+  @Input() bookId;
+  @Output() commentSave = new EventEmitter<any>();
+
+  comment: String;
+
   constructor() { }
 
   ngOnInit() {
+  	console.log("bookId::", this.bookId);
   }
 
   onClickCommentSave(event){
-  	// perform service call
+  	
+  	this.commentSave.next(this.comment);
   }
 
 }

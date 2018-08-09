@@ -1,6 +1,6 @@
 <form #form="ngForm" novalidate>
 	<mat-form-field >
-    	<textarea matInput placeholder="Leave a comment" #input required ngModel name="comment"></textarea>
+    	<textarea matInput placeholder="Leave a comment" #input required [(ngModel)]="comment" name="comment"></textarea>
 	</mat-form-field>
 	<div>
 		<button mat-raised-button color="accent" (click)="onClickCommentSave($event)" [disabled]="!form.valid">Save</button>

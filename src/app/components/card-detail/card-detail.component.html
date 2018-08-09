@@ -1,4 +1,7 @@
-<div class="card-detail-wrapper" *ngIf="bookData">
+<div *ngIf="bookData">
+	
+
+<div class="card-detail-wrapper" >
 	
 	<div class="detail-info-wrapper">
 		<div class="detail-image">
@@ -22,4 +25,12 @@
 		<button class="button button--showmore">show more</button>
 		 
 	</div>
+</div>
+
+<!-- create comment  component--> 
+	<div *ngIf="newComment">
+		<app-new-comment (commentSave) = "onClickComment($event)" [bookId] = "bookData.id"></app-new-comment>
+	</div>
+	
+	
 </div>
