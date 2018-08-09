@@ -13,6 +13,7 @@ import { CardListComponent } from './components/card-list/card-list.component';
 // Service
 
 import { BooksService }from './share/services/books.service';
+import { NewCommentComponent } from './components/new-comment/new-comment.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BooksService }from './share/services/books.service';
     DashboardPage,
     SearchComponent,
     CardComponent,
-    CardListComponent
+    CardListComponent,
+    NewCommentComponent
   ],
   imports: [
     HttpClientModule,
