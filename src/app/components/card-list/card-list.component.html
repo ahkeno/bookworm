@@ -1,2 +1,2 @@
-<app-card-component [cardData]="card" *ngFor = "let card of cardListData" > </app-card-component>
+<app-card-component [cardData]="card" *ngFor = "let card of cardListData" (cardClick)="onClickBook($event)"> </app-card-component>
 

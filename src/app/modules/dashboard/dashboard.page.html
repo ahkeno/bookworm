@@ -4,7 +4,7 @@
 <div >
 	<!-- if search result avaliable -->
 	<div  *ngIf="bookList | async as list">
-		<app-card-list [cardListData]="list" ></app-card-list>
+		<app-card-list [cardListData]="list" (cardClick)="onClickBook($event)"></app-card-list>
 	</div>	
 	<!-- if search result not avaliable -->
 	<!-- show No Result component -->
