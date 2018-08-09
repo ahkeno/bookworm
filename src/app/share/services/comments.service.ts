@@ -9,13 +9,11 @@ import { Comment } from './../models/comment';
 import { environment } from '../../../environments/environment';
 
 
-
 @Injectable()
 
 export class CommentService {
 	private rootUrl = `${environment.API_ROOT}`;
-  private mock = `${environment.MOCK}`;
-  private urlComments = this.mock + 'comments';
+  private urlComments = this.rootUrl + 'comments';
 
  
 	private httpOptions = {
