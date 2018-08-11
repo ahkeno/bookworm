@@ -13,9 +13,12 @@ import { SearchComponent } from './components/searchBox/search-box.component';
 import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { CardDetailComponent } from './components/card-detail/card-detail.component';
+import { NewCommentComponent } from './components/new-comment/new-comment.component';
 // Service
 
 import { BooksService }from './share/services/books.service';
+import { CommentService }from './share/services/comments.service';
+
 
 
 @NgModule({
@@ -26,14 +29,16 @@ import { BooksService }from './share/services/books.service';
     SearchComponent,
     CardComponent,
     CardListComponent,
+    NewCommentComponent,
     CardDetailComponent
+
   ],
   imports: [
     HttpClientModule,
     CoreModule,
     AppRoutingModule
   ],
-  providers: [ BooksService],
+  providers: [ BooksService,CommentService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

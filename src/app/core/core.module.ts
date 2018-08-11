@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 import { CdkTableModule} from '@angular/cdk/table';
 import { CdkTreeModule} from '@angular/cdk/tree';
 import { BrowserModule } from '@angular/platform-browser';
@@ -7,7 +8,7 @@ import { MatIconRegistry } from '@angular/material';
 import { DomSanitizer } from '@angular/platform-browser';
 
 import {
-
+  
   MatAutocompleteModule,
   MatBadgeModule,
   MatBottomSheetModule,
@@ -48,6 +49,8 @@ import {
 @NgModule({
   imports: [],
   exports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserAnimationsModule,
     BrowserModule,
     CdkTableModule,
