@@ -6,21 +6,27 @@ import { AppRoutingModule }	from './routes/app.route.module';
 
 import { AppComponent } from './app.component';
 import { DashboardPage } from './modules/dashboard/dashboard.page';
+import { BookPage } from './modules/book-page/book.page';
+
+
 import { SearchComponent } from './components/searchBox/search-box.component';
 import { CardComponent } from './components/card/card.component';
 import { CardListComponent } from './components/card-list/card-list.component';
-
+import { CardDetailComponent } from './components/card-detail/card-detail.component';
 // Service
 
 import { BooksService }from './share/services/books.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+    BookPage,
     DashboardPage,
     SearchComponent,
     CardComponent,
-    CardListComponent
+    CardListComponent,
+    CardDetailComponent
   ],
   imports: [
     HttpClientModule,
