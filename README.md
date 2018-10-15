@@ -40,3 +40,5 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 -[debug in Karma/Jasmine] https://stackoverflow.com/questions/45722256/how-do-i-debug-a-object-errorevent-thrown-error-in-my-karma-jasmine-tests
 
+-[promise-vs-observable] https://stackoverflow.com/questions/37364973/promise-vs-observable
+
