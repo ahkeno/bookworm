@@ -29,7 +29,6 @@
 		ngOnInit() {
 			
 			this.booksService.getBook(this.bookId).subscribe(dataBook => {
-				 debugger;
 				this.book = dataBook;
 			} );
 		}
