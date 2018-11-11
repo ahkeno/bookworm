@@ -28,9 +28,9 @@
 		}
 		ngOnInit() {
 			
-			this.booksService.getBook(this.bookId).subscribe(book => {
+			this.booksService.getBook(this.bookId).subscribe(dataBook => {
 				 
-				this.book = book;
+				this.book = dataBook;
 			} );
 		}
 		
