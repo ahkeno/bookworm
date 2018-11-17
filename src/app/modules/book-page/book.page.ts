@@ -6,7 +6,7 @@
 	import { Book } from './../../share/models/book';
 	import { BooksService } from './../../share/services/books.service';
 	import { WrappedCollection } from './../../share/services/wrapped.collection';
-	
+	import { CommentService } from './../../share/services/comments.service';
 
 	@Component({
 	  selector: 'app-book-page',
@@ -15,9 +15,11 @@
 	export class BookPage implements OnInit{
 		book: any;
 		bookId: string;
+		commentDataWithId: any;
 
 		constructor(
 			private booksService: BooksService,
+			private commentService: CommentService,
 			private route: ActivatedRoute
 			) {
 			this.route.params.subscribe(queryParams => {
@@ -27,13 +29,27 @@
 			});
 		}
 		ngOnInit() {
-			
+			this.loadBook();
+			this.loadComments();
+		}
+
+		loadBook(){
 			this.booksService.getBook(this.bookId).subscribe(dataBook => {
-				 debugger;
+				 
 				this.book = dataBook;
 			} );
 		}
+
+		loadComments(){
+			this.commentService.getComments().subscribe(dataComments => {
+				this.commentDataWithId = this.getCommentWithId(dataComments,this.bookId);
+			} );
+		}
 		
+		getCommentWithId(comments, bookId) {
+			let commentList = comments.filter(comments => comments.bookid == bookId);
+  			return commentList;
+		}
 		  
 
 	}

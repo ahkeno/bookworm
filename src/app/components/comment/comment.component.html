@@ -1,0 +1,25 @@
+<!-- UI for the comment  -->
+<!-- while clikc on the comment , will link to the User detail page  -->
+<!-- <mat-card *ngIf="commentData" (click)="onCardClick($event,commentData.id)">
+ -->
+ <mat-card  >
+  <mat-card-header >
+    <mat-card-subtitle>by {{commentData.commenter}}</mat-card-subtitle>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <img *ngIf="commentData.image" src={{commentData.image}}>
+    <p>
+      {{commentData.desription}}
+    </p>
+  </mat-card-content>
+  <div *ngIf="commentData.ag">
+    <button  *ngFor = "let tag of commentData.tag" class="card-tag">
+        <mat-icon svgIcon="labels" class="green-icon"></mat-icon>{{tag}}
+    </button>
+  </div>
+</mat-card>
+
+
+
+

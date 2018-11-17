@@ -14,8 +14,7 @@ import { environment } from '../../../environments/environment';
 export class CommentService {
 	private rootUrl = `${environment.API_ROOT}`;
   private urlComments = this.rootUrl + 'comments';
-
- 
+  
 	private httpOptions = {
 	  headers: new HttpHeaders({
 	    'Content-Type':  'application/json'
@@ -37,7 +36,16 @@ export class CommentService {
                 }) // to do error notification while service fail
                );
     }
-    
+    getComments():Observable<Comment>{
+      
+      
+      return this.http.get<Comment>(this.urlComments).pipe(
+        tap(commentdata => console.log("fetch Comment wiht ID",commentdata), ),
+        catchError((error:any) => {
+          return Observable.throw(error);
+        }) // to do error notification while service fail
+          );
+    }
 
 
   

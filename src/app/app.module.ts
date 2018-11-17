@@ -18,6 +18,8 @@ import { NewCommentComponent } from './components/new-comment/new-comment.compon
 
 import { BooksService }from './share/services/books.service';
 import { CommentService }from './share/services/comments.service';
+import { CommentListComponent } from './components/comment-list/comment-list.component';
+import { CommentComponent } from './components/comment/comment.component';
 
 
 
@@ -30,7 +32,9 @@ import { CommentService }from './share/services/comments.service';
     CardComponent,
     CardListComponent,
     NewCommentComponent,
-    CardDetailComponent
+    CardDetailComponent,
+    CommentListComponent,
+    CommentComponent
 
   ],
   imports: [
