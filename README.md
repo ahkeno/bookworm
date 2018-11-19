@@ -1,6 +1,10 @@
 
 
 # BookWorm
+I create this project under 
+1) re-usable components
+2) Clean Code 
+3) Efficient Performance by Using Angular - 6, Typescript and ES6 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.This project is start the idea of collection(GoodRead) of the books I read and quotes. 
 
