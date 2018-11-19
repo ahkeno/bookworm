@@ -13,7 +13,18 @@ before_script:
  - sudo apt-get install -y libappindicator1 fonts-liberation
  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
  - sudo dpkg -i google-chrome*.deb
+ 
+ before_install:
+  - npm install npm@5 -g
+  - npm cache verify
+  - npm prune
+  - npm update
+
+install:
+  - npm install
 
 script: 
   - ng test 
   - npm run e2e
+  - ng build --prod --aot
+  - npm run ci:travis
