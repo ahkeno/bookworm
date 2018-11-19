@@ -1,11 +1,13 @@
 import { Component, OnInit,Input } from '@angular/core';
+import { ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Comment } from './../../share/models/comment';
 import { CommentService } from './../../share/services/comments.service';
 
 @Component({
   selector: 'app-card-detail',
-  templateUrl: './card-detail.component.html'
+  templateUrl: './card-detail.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardDetailComponent implements OnInit {
 	comment: any;
@@ -32,7 +34,6 @@ export class CardDetailComponent implements OnInit {
 
 		if(this.comment){
 			this.commentService.postComment(this.comment).subscribe(commentResult => {
-		      alert("add comment");
 		      //to do show notification of successfully comment
 
 		      //hide comment component

@@ -1,4 +1,4 @@
-<app-card-detail [bookData]="book" ></app-card-detail>
-<!-- will do component later
-<app-comment-list [id]="bookId"></app-comment-list>
-	 -->
+<app-card-detail [bookData]="book"></app-card-detail>
+
+<app-comment-list [commentData]="commentDataWithId" *ngIf="commentDataWithId"></app-comment-list>
+	
