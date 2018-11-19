@@ -26,5 +26,4 @@ install:
 script: 
   - ng test 
   - npm run e2e
-  - ng build --prod --aot
-  - npm run ci:travis
+ 
