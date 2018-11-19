@@ -13,7 +13,7 @@
 	  templateUrl: './book.page.html'
 	})
 	export class BookPage implements OnInit{
-		book: Observable<Book>;
+		book: any;
 		bookId: string;
 
 		constructor(
@@ -28,9 +28,8 @@
 		}
 		ngOnInit() {
 			
-			this.booksService.getBook(this.bookId).subscribe(book => {
-				 
-				this.book = book;
+			this.booksService.getBook(this.bookId).subscribe(dataBook => {
+				this.book = dataBook;
 			} );
 		}
 		
