@@ -35,7 +35,6 @@
 
 		loadBook(){
 			this.booksService.getBook(this.bookId).subscribe(dataBook => {
-				 
 				this.book = dataBook;
 			} );
 		}
