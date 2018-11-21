@@ -1,0 +1,50 @@
+.comment-container{
+  border: 1px solid rgba(0,100,0,.2);
+  border-radius: 3px;
+  padding: 20px;
+  margin: 5px 0;
+  background: #fff;
+}
+.comment-header{
+  display: flex;
+  
+}
+.commenter-info{
+  padding: 0 10px;
+}
+.user-img{
+  border-radius: 100%;
+  box-shadow: 0px 1px 3px #333;
+  width: 5vw;
+  height: 15vh;
+}
+.date{
+  display: block;
+  font-family: 'Merriweather', serif;
+}
+.author-title{
+  font-family: 'Merriweather', serif;
+  font-size: 22px;
+  line-height: 38px;
+  color: #008000;
+}
+.rating{
+  margin-left: auto;
+}
+@media only screen and (max-width: 600px) {
+  
+  .author-title-info{
+    padding: 10px 0;
+  }
+  .mat-card-title{
+    font-size: 32px;
+    line-height: 34px;
+  }
+  .rating{
+    padding: 10px 0;
+  }
+  .user-img{
+    width: 15vw;
+    height: 10vh;
+  }
+}

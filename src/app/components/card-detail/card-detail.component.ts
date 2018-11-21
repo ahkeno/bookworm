@@ -7,6 +7,7 @@ import { CommentService } from './../../share/services/comments.service';
 @Component({
   selector: 'app-card-detail',
   templateUrl: './card-detail.component.html',
+  styleUrls: ['./card-detail.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CardDetailComponent implements OnInit {

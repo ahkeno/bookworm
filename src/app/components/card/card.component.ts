@@ -8,7 +8,8 @@ import { Book } from './../../share/models/book';
 
 @Component({
   selector: 'app-card-component',
-  templateUrl: './card.component.html'
+  templateUrl: './card.component.html',
+  styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
 
