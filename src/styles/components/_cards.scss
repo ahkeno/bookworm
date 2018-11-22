@@ -6,12 +6,8 @@
 		cursor: pointer;
 		border-radius: 4px;
 		}
-	.mat-card-title{
-		font-size: 32px;
-	    text-transform: capitalize;
-		}
 	.mat-card-subtitle{
-		font-size: 24px;
+		font-size: $font-size-medium;
 	}
 	.mat-card-content{
 		display: inline-flex;
@@ -26,8 +22,7 @@
 			border: none;
 		    background: transparent;
 		    vertical-align: center;
-		    /* padding: 0px; */
-		    font-size: 18px;
+		    font-size: $font-size-base;
 		    display: inline-flex;
 		    align-items: flex-start;
 		    line-height: 24px;

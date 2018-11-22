@@ -5,7 +5,7 @@
         "name": "consectetur adipiscing elit",
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         "author": "author1",
-        "image": "http://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
+        "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
         "tag": [
           "Biography","Fiction"
         ]
@@ -15,7 +15,7 @@
         "name": "ipsum dolor sit amet",
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate ",
         "author": "author2",
-        "image": "http://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
+        "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
         "tag": [
           "Novel"
         ]
@@ -35,7 +35,7 @@
         "name": "sed do eiusmod tempor",
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco  ",
         "author": "author2",
-        "image": "http://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
+        "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
         "tag": [
           "Fantasy"
         ]
@@ -45,7 +45,7 @@
         "name": "Ut enim ad minim veniam",
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  ",
         "author": "author2",
-        "image": "http://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
+        "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
         "tag": [
           "Romance"
         ]
@@ -55,7 +55,7 @@
         "name": "Ut enim ad minim veniam",
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  ",
         "author": "author2",
-        "image": "http://www.columbiactlibrary.org/wp-content/uploads/2012/10/books.png",
+        "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
         "tag": [
           "Romance"
         ]

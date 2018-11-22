@@ -1,3 +1,4 @@
+@import "./../../../styles/utilities/variables";
 .card-detail-wrapper{
   background: #FFF;
   border: 1px solid rgba(0,100,0,.2);
@@ -22,7 +23,8 @@
 }
 .detail-description{
   font-family: 'Merriweather', serif;
-  font-size: 16px;
+  font-size: $font-size-base;
+  
 }
 .button{
   border: 1px solid transparent;
@@ -34,8 +36,8 @@
 }
 .button--primiary{
   color: #fff;
-  background-color:#008000;
-  background-image: linear-gradient(-50deg,	#006400,#228B22, #008000 );
+  background-color:$bookworm-green;
+  background-image: linear-gradient(-50deg,	#006400,#228B22, $bookworm-green );
 }
 @media only screen and (max-width: 600px) {
   .card-detail-wrapper{
@@ -54,10 +56,7 @@
   .author-title-info{
   	padding: 10px 0;
   }
-  .mat-card-title{
-  	font-size: 32px;
-  	line-height: 34px;
-  }
+  
   .rating{
   	padding: 10px 0;
   }
