@@ -8,7 +8,8 @@ import { Book } from './../../share/models/book';
 
 @Component({
   selector: 'app-comment-component',
-  templateUrl: './comment.component.html'
+  templateUrl: './comment.component.html',
+  styleUrls: ['./comment.component.scss']
 })
 export class CommentComponent implements OnInit {
 

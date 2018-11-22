@@ -1,20 +1,18 @@
 <div *ngIf="bookData">
-	
-
 <div class="card-detail-wrapper" >
 	
 	<div class="detail-info-wrapper">
 		<div class="detail-image">
-			<img src={{bookData.image}}>
+			<img class="cover-image" src={{bookData.image}}>
 		</div>
-		<div >
+		<div class="author-title-info">
 			<div class="mat-card-title">{{bookData.name}}</div>
-			<div class="detail-author">
-				<h3 class="mat-card-subtitle">{{bookData.author}}</h3>
+			<div class="author-title">
+				{{bookData.author}}
 			</div>
 		</div>
 		
-		<div class="detail-rating">
+		<div class="rating">
 			<!-- will be component in future development -->
 			<div>show rating</div>
 		</div>
@@ -31,6 +29,4 @@
 	<div *ngIf="newComment">
 		<app-new-comment (commentSave) = "onClickComment($event)" [bookId] = "bookData.id"></app-new-comment>
 	</div>
-	
-	
 </div>

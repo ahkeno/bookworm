@@ -1,0 +1,22 @@
+.mat-card-title{
+  font-family: $font-family-title;
+  font-size: $font-size-extra-large;
+  line-height: 44px;
+  color: #696969;
+}
+.author-title{
+  font-family: 'Merriweather', serif;
+  font-size: $font-size-medium;
+  line-height: 38px;
+  color: $bookworm-green;
+}
+@media only screen and (max-width: 600px) {
+	.mat-card-title{
+    font-size: $font-size-large;
+    line-height: 34px;
+  }
+  .mat-card-title{
+  	font-size: $font-size-large;
+  	line-height: 34px;
+  }
+}

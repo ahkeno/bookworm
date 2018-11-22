@@ -2,21 +2,24 @@
 <!-- while clikc on the comment , will link to the User detail page  -->
 <!-- <mat-card *ngIf="commentData" (click)="onCardClick($event,commentData.id)">
  -->
- <mat-card  >
-  <mat-card-header >
-    <mat-card-subtitle>by {{commentData.commenter}}</mat-card-subtitle>
+ <mat-card  class="comment-container">
+  <mat-card-header class="comment-header">
+    <img *ngIf="commentData.image" src={{commentData.image}} class="user-img">
+    <div class="commenter-info">
+       <div class="author-title">by {{commentData.commenter}}</div>
+    <div class="date">11 Nov 2018</div>  <!-- to do date  -->
+    </div>
+    <div class="rating">rating</div>
   </mat-card-header>
+  <div class="detail-description">
+    {{commentData.desription}}
+  </div>
   
-  <mat-card-content>
-    <img *ngIf="commentData.image" src={{commentData.image}}>
-    <p>
-      {{commentData.desription}}
-    </p>
-  </mat-card-content>
-  <div *ngIf="commentData.ag">
-    <button  *ngFor = "let tag of commentData.tag" class="card-tag">
+  <div class="tag" *ngIf="commentData.ag">
+    <a *ngFor = "let tag of commentData.tag" class="card-tag">
         <mat-icon svgIcon="labels" class="green-icon"></mat-icon>{{tag}}
-    </button>
+    </a>
+      
   </div>
 </mat-card>
 
