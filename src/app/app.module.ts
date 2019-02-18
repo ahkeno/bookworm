@@ -7,7 +7,7 @@ import { AppRoutingModule }	from './routes/app.route.module';
 import { AppComponent } from './app.component';
 import { DashboardPage } from './modules/dashboard/dashboard.page';
 import { BookPage } from './modules/book-page/book.page';
-
+import { CategoryListPage } from './modules/category-list/category-list.page';
 
 import { SearchComponent } from './components/searchBox/search-box.component';
 import { CardComponent } from './components/card/card.component';
@@ -20,6 +20,7 @@ import { BooksService }from './share/services/books.service';
 import { CommentService }from './share/services/comments.service';
 import { CommentListComponent } from './components/comment-list/comment-list.component';
 import { CommentComponent } from './components/comment/comment.component';
+import { TagsService }from './share/services/tags.service';
 
 
 
@@ -28,6 +29,7 @@ import { CommentComponent } from './components/comment/comment.component';
     AppComponent,
     BookPage,
     DashboardPage,
+    CategoryListPage,
     SearchComponent,
     CardComponent,
     CardListComponent,
@@ -42,7 +44,7 @@ import { CommentComponent } from './components/comment/comment.component';
     CoreModule,
     AppRoutingModule
   ],
-  providers: [ BooksService,CommentService],
+  providers: [ BooksService,CommentService,TagsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

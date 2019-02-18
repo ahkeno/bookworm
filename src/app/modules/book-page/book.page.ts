@@ -20,6 +20,7 @@
 		constructor(
 			private booksService: BooksService,
 			private commentService: CommentService,
+			private router : Router,
 			private route: ActivatedRoute
 			) {
 			this.route.params.subscribe(queryParams => {
@@ -49,6 +50,9 @@
 			let commentList = comments.filter(comments => comments.bookid == bookId);
   			return commentList;
 		}
-		  
+		
+		onClickDashboard(){
+			this.router.navigate(['/']);
+		}
 
 	}

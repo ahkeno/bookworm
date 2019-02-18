@@ -1,12 +1,24 @@
 <div class="search-box">
 	<app-search></app-search>	
 </div>
-<div >
-	<!-- if search result avaliable -->
-	<div  *ngIf="bookList | async as list">
-		
-		<app-card-list [cardListData]="list" (cardClick)="onClickBook($event)"></app-card-list>
-	</div>	
-	<!-- if search result not avaliable -->
-	<!-- show No Result component -->
+<div class="dashboard-list">
+		<div >
+			<!-- if search result avaliable -->
+			<div  *ngIf="bookList | async as list">
+				<app-card-list [cardListData]="list" (cardClick)="onClickBook($event)"></app-card-list>
+			</div>	
+			<!-- if search result not avaliable -->
+			<!-- show No Result component -->
+		</div>
+		<!-- Tag list -->
+		<div class="category-list" *ngIf="tagList">
+			<ul>
+				<li *ngFor="let tag of tagList" (click)="onClickTage($event,tag)">
+					{{tag}}
+				</li>
+			</ul>
+		</div>
 </div>
+
+
+	

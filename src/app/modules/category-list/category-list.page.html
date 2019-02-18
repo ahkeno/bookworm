@@ -1,0 +1,42 @@
+
+<div  *ngIf="tagList" class="category-list-page">
+	<!-- to do as breadcrumb component  -->
+	<div class="breadcrumb">
+			<ul>
+				<li (click)="onClickDashboard()">
+					Back to <span class="active"><< dashboard </span>
+				</li>
+			</ul>
+		</div>
+		<!-- to do as breadcrumb component  -->
+	<h1 class="mat-card-title">List With {{tag}}</h1>
+	<div *ngFor= "let list of tagList">
+			<mat-card *ngIf="list"  class="card-content" (click)="onTagClick($event,list.id)">
+					<mat-card-header >
+					  <mat-card-title *ngIf="list.name" >{{list.name}}</mat-card-title>
+					  <div class="author-title">by {{list.author}}</div>
+					</mat-card-header>
+					
+					<mat-card-content>
+					  <img *ngIf="list.image" src={{list.image}} class="cover-image">
+					  <p>
+						{{list.desription}}
+					  </p>
+					</mat-card-content>
+					<div *ngIf="list.ag">
+					  <button  *ngFor = "let tag of cardData.tag" class="card-tag">
+						  <mat-icon svgIcon="labels" class="green-icon"></mat-icon>{{tag}}
+					  </button>
+					</div>
+				  </mat-card>
+	</div>
+		
+</div>
+
+
+	  
+	  
+	  
+	  
+	  
+

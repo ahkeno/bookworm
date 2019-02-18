@@ -3,6 +3,8 @@
     "/api/authors": "/authors",
     "/api/quotes": "/quotes",
     "/api/comments": "/comments",
-    "/api/book/:id": "/books/id"
-
+    "/api/book/:id": "/books/id",
+    "/api/*/_search?*=:searchstring": "/$1/?$2_like=:searchstring",
+    "/api/*": "/$1"
+      
 }
