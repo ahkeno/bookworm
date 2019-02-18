@@ -14,6 +14,8 @@
 		<div class="category-list" *ngIf="tagList">
 			<ul>
 				<li *ngFor="let tag of tagList" (click)="onClickTage($event,tag)">
+					
+					<img class="icon-category" src="./assets/img/icons/{{tag}}.png" alt="" width="20" height="20">
 					{{tag}}
 				</li>
 			</ul>

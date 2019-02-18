@@ -39,7 +39,7 @@
   background-color:$bookworm-green;
   background-image: linear-gradient(-50deg,	#006400,#228B22, $bookworm-green );
 }
-@media only screen and (max-width: 600px) {
+@media screen and (max-width: 600px){
   .card-detail-wrapper{
   	padding: 10px;
   }
@@ -48,10 +48,8 @@
   }
   .cover-image{
   	width: 50vw;
-    height: 60vh;
+    height: 30vh;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
   }
   .author-title-info{
   	padding: 10px 0;

@@ -1,10 +1,14 @@
 @import "./../../../styles/utilities/variables";
-.card-content{
-	
-}
 .cover-image{
   display: inline-bock;
   width: 15vw;
 	height: 30vh;
   border: 1px solid rgba(0,100,0,.2);
+}
+@media screen and (max-width: 600px){
+  .cover-image{
+  	width: 50vw;
+    height: 30vh;
+    display: block;
+  }
 }
