@@ -4,12 +4,9 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 
-
 import { Book } from './../models/book';
 import { WrappedCollection } from './/wrapped.collection';
 import { environment } from '../../../environments/environment';
-
-
 
 @Injectable()
 
@@ -45,6 +42,16 @@ export class BooksService {
 
       return this.http.get<Book>(bookURL).pipe(
         tap(bookdata => console.log("fetch Book wiht ID",bookdata) ),
+        catchError((error:any) => {
+          return Observable.throw(error);
+        }) // to do error notification while service fail
+          );
+    }
+
+    searchBook(keyword):Observable<Book>{
+      const bookSearchURL = this.urlBooks + '/_search?name=' + keyword ;
+      return this.http.get<Book>(bookSearchURL).pipe(
+        tap(bookdata => console.log("fetch Book wiht keywords") ),
         catchError((error:any) => {
           return Observable.throw(error);
         }) // to do error notification while service fail
