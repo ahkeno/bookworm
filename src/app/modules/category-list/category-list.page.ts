@@ -28,12 +28,10 @@
 		
 		loadBookList(tag){
 			this.tagService.getBookListByTag(tag).subscribe(dataTags => 	{
-				console.log("search result",dataTags);
 				this.tagList = dataTags;
 			} );
 		}
 		onTagClick(event,id){
-			console.log("OnClick of Tag",id);
 			this.router.navigate(['/book/'+ id]);
 		}
 

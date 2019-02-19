@@ -5,6 +5,8 @@ import { HttpClientTestingModule, HttpTestingController } from '@angular/common/
 import { CoreModule } from './../../core/core.module';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardPage } from './dashboard.page';
+
+import { CategoryListPage } from './../../modules/category-list/category-list.page';
 import { SearchComponent } from './../../components/searchBox/search-box.component';
 import { CardComponent } from './../../components/card/card.component';
 import { CardListComponent } from './../../components/card-list/card-list.component';
@@ -22,6 +24,7 @@ describe('Landing to Dashboard Page ', () => {
       providers: [ BooksService,HttpTestingController,HttpClient],
       declarations: [
         DashboardPage,
+        CategoryListPage,
         CardListComponent,
         SearchComponent,
         CardComponent

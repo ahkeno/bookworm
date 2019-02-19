@@ -44,7 +44,7 @@ export class BooksService {
       const bookURL = `${this.mock}/${id}` ;
 
       return this.http.get<Book>(bookURL).pipe(
-        tap(bookdata => console.log("fetch Book wiht ID") ),
+        tap(bookdata => console.log("fetch Book wiht ID",bookdata) ),
         catchError((error:any) => {
           return Observable.throw(error);
         }) // to do error notification while service fail
