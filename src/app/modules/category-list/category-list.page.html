@@ -1,0 +1,22 @@
+
+<div  *ngIf="tagList" class="category-list-page">
+	<!-- to do as breadcrumb component  -->
+	<div class="breadcrumb">
+			<ul>
+				<li (click)="onClickDashboard()">
+					Back to <span class="active"><< dashboard </span>
+				</li>
+			</ul>
+		</div>
+		<!-- to do as breadcrumb component  -->
+	<h1 class="mat-card-title">List With {{tag}}</h1>
+	<app-card-component [cardData]="list" *ngFor = "let list of tagList" (cardClick)="onTagClick($event,list.id)" class="card-list-content"> </app-card-component>
+</div>
+
+
+	  
+	  
+	  
+	  
+	  
+

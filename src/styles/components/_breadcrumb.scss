@@ -1,0 +1,12 @@
+.breadcrumb{
+    ul {
+        padding: 0;
+        li{
+        list-style: none;
+        padding: 0;
+    }
+}
+    .active{
+        color: $bookworm-green;
+    }
+}

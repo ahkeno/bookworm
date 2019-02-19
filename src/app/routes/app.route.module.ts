@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { DashboardPage } from '../modules/dashboard/dashboard.page';
 import { BookPage } from '../modules/book-page/book.page';
-
+import { CategoryListPage } from '../modules/category-list/category-list.page';
 const routes: Routes = [
     {
         path: '',
@@ -16,6 +16,10 @@ const routes: Routes = [
     {
         path: 'book/:id',
         component: BookPage,
+    },
+    {
+        path: 'category/:tag',
+        component: CategoryListPage,
     }
     
 ];

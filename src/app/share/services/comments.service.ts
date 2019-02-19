@@ -31,7 +31,6 @@ export class CommentService {
                .pipe(
                 tap((comment: Comment) => console.log(`added comment w`)),
                 catchError((error:any) => {
-                  console.log("ERROR",error);
                   return Observable.throw(error);
                 }) // to do error notification while service fail
                );

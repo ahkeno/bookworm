@@ -26,8 +26,7 @@ export class CommentComponent implements OnInit {
   }
   
   ngOnInit() {
-    debugger;
-  	console.log("in comment component", this.commentData);
+    
   }
   // onCardClick(event,id){
   //   this.cardClick.next(id);

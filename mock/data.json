@@ -6,9 +6,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
         "author": "author1",
         "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        "tag": [
-          "Biography","Fiction"
-        ]
+        "tag": "Biography"
       },
       {
         "id": 2,
@@ -16,9 +14,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate ",
         "author": "author2",
         "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        "tag": [
-          "Novel"
-        ]
+        "tag": "Novel"
       },
       {
         "id": 3,
@@ -26,9 +22,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum ",
         "author": "author1",
         "image": "",
-        "tag": [
-          "Non Fiction"
-        ]
+        "tag": "Non Fiction"
       },
       {
         "id": 4,
@@ -36,9 +30,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco  ",
         "author": "author2",
         "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        "tag": [
-          "Fantasy"
-        ]
+        "tag": "Fantasy"
       },
       {
         "id": 5,
@@ -46,9 +38,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  ",
         "author": "author2",
         "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        "tag": [
-          "Romance"
-        ]
+        "tag": "Romance"
       },
       {
         "id": 6,
@@ -56,9 +46,7 @@
         "desription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea  ",
         "author": "author2",
         "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
-        "tag": [
-          "Romance"
-        ]
+        "tag": "Romance"
       }
   ]
 ,

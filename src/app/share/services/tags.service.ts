@@ -5,19 +5,17 @@ import { catchError, tap } from 'rxjs/operators';
 import { HttpHeaders } from '@angular/common/http';
 
 
+import { Tag } from './../models/tag';
 import { Book } from './../models/book';
-import { WrappedCollection } from './/wrapped.collection';
 import { environment } from '../../../environments/environment';
-
 
 
 @Injectable()
 
-export class BooksService {
+export class TagsService {
 	private rootUrl = `${environment.API_ROOT}`;
-  private urlBooks = this.rootUrl + 'books';
-  private urlBookDetail = this.rootUrl + 'book';
-  private mock = `${environment.MOCK}` +'books'
+    private urlBooks = this.rootUrl + 'books';
+  
 	private httpOptions = {
 	  headers: new HttpHeaders({
 	    'Content-Type':  'application/json'
@@ -29,22 +27,22 @@ export class BooksService {
   	
   	) { }
 
-  	getAllBooks():Observable<WrappedCollection<Book>>{
-  		
-  		return this.http.get<WrappedCollection<Book>>(this.urlBooks).pipe(
-  			tap(booksList => console.log(booksList)),
-      	catchError((error:any) => {
+  	
+    getTags():Observable<any>{
+      
+      return this.http.get<Tag>(this.urlBooks).pipe(
+        tap(tagdata => console.log("fetch Tag ",tagdata), ),
+        catchError((error:any) => {
           return Observable.throw(error);
         }) // to do error notification while service fail
-      		);
-  	}
+          );
+    }
+    getBookListByTag(tag):Observable<Book>{
 
-    getBook(id):Observable<Book>{
+      const tagsearchURL = this.urlBooks + '/_search?tag=' + tag ;
 
-      const bookURL = `${this.mock}/${id}` ;
-
-      return this.http.get<Book>(bookURL).pipe(
-        tap(bookdata => console.log("fetch Book wiht ID",bookdata) ),
+      return this.http.get<Book>(tagsearchURL).pipe(
+        tap(bookdata => console.log("fetch Book wiht tag") ),
         catchError((error:any) => {
           return Observable.throw(error);
         }) // to do error notification while service fail

@@ -1,4 +1,13 @@
+<div class="book-page">
+<!-- to do as breadcrumb component  -->
+<div class="breadcrumb">
+        <ul>
+            <li (click)="onClickDashboard()">
+                Back to <span class="active"><< dashboard </span>
+            </li>
+        </ul>
+    </div>
+    <!-- to do as breadcrumb component  -->
 <app-card-detail [bookData]="book"></app-card-detail>
-
 <app-comment-list [commentData]="commentDataWithId" *ngIf="commentDataWithId"></app-comment-list>
-	
+</div>
