@@ -1,25 +1,22 @@
 <div class="search-box">
 	<app-search (onSearch)="onSearchResult($event)"></app-search >
-	
 </div>
 
 <div class="dashboard-list" >
 		<!-- if search result avaliable -->	
-		<div *ngIf="searchResultsFound">
+		<div *ngIf="searchResultsFound && !onLoadBookData">
 				We found {{searchResults.length}} Book(s) by keyword you search {{keywords}}
 				<div class="dashboard-list" >
 					<app-card-list [cardListData]="searchResults" (cardClick)="onClickBook($event)"></app-card-list>
 				</div>
 		</div>
 		<!-- if search result not avaliable -->
-		<div *ngIf="!searchResultsFound">
-				We didn't found {{keywords}} in our Book(s) 
+		<div *ngIf="(!searchResultsFound)">
+				<span *ngIf="!onLoadBookData">We didn't found {{keywords}} in our Book(s) </span>
 			<!-- show No Result component -->
 			<div  *ngIf="bookList | async as list">
 				<app-card-list [cardListData]="list" (cardClick)="onClickBook($event)"></app-card-list>
 			</div>	
-			
-			
 		</div>	
 		<!-- Tag list -->
 		<div class="category-list" *ngIf="tagList">

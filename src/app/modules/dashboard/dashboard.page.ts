@@ -18,6 +18,7 @@
 		searchResultsFound: boolean;
 		searchResults: any;
 		keywords: string = "";
+		onLoadBookData: boolean = true;
 
 		constructor(
 			private booksService: BooksService,
@@ -37,7 +38,6 @@
 		}
 		
 		loadTags(){
-			
 			this.tagService.getTags().subscribe(dataTags => 	{
 				let  categoryList = [];
 				dataTags.forEach(function(element) {
@@ -52,11 +52,12 @@
 
 		}
 		onSearchResult(data){
-			debugger;
+			this.onLoadBookData = false;
 			if(data[0].results.length !== 0){
 				this.searchResultsFound = true;
 				this.searchResults = data[0].results;
 				this.keywords = data[0].keyword;
+				
 			}else{
 				this.searchResultsFound = false;
 				this.keywords = data[0].keyword;

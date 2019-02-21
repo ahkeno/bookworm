@@ -46,7 +46,17 @@ export class CommentService {
           );
     }
 
+    getCommentbyId(id):Observable<Comment>{
 
+      const commentIDURL = this.urlComments + '?bookId=' + id ;
+
+      return this.http.get<Comment>(commentIDURL).pipe(
+        tap(commentdata => console.log("fetch comment wiht ID",commentdata) ),
+        catchError((error:any) => {
+          return Observable.throw(error);
+        }) // to do error notification while service fail
+          );
+    }
   
 
 }
