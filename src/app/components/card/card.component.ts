@@ -26,9 +26,8 @@ export class CardComponent implements OnInit {
   }
   
   ngOnInit() {
-    debugger;
-    console.log("Input",this.cardData);
   }
+  
   onCardClick(event,id){
     this.cardClick.next(id);
   }

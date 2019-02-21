@@ -1,4 +1,4 @@
-import { Component,Output,EventEmitter } from '@angular/core';
+import { Component,Output,EventEmitter,ElementRef } from '@angular/core';
 import { Router,ActivatedRoute} from "@angular/router";
 import { BooksService } from './../../share/services/books.service';
 
@@ -10,6 +10,7 @@ export class SearchComponent {
 
   @Output() onSearch = new EventEmitter<any>();
   constructor(
+    private el: ElementRef,
     private booksService: BooksService,
     private router : Router,
 		private route: ActivatedRoute
@@ -21,15 +22,19 @@ export class SearchComponent {
   }
 
   serchBookName(keyword){
-    debugger;
-    this.booksService.searchBook(keyword.target.value).subscribe(dataBooks => {
-    if(dataBooks){
-      this.onSearch.next([
-        {
-        'results':dataBooks,
-        'keyword':keyword.target.value
-        }]);
+    if(keyword.target.value !== ""){
+      this.booksService.searchBook(keyword.target.value).subscribe(dataBooks => {
+        if(dataBooks){
+          this.onSearch.next([
+            {
+            'results':dataBooks,
+            'keyword':keyword.target.value
+            }]);
+        }
+        } );
+    }else{
+      this.el.nativeElement.focus();
     }
-    } );
+    
   }
 }

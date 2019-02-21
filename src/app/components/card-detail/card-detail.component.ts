@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input, Output ,EventEmitter,OnChanges} from '@angular/core';
 import { ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Comment } from './../../share/models/comment';
@@ -14,6 +14,7 @@ export class CardDetailComponent implements OnInit {
 	comment: any;
 	newComment: boolean;
 	@Input() bookData: any;
+	@Output() newCommentSave = new EventEmitter<any>();
 
 	constructor(
 		private commentService: CommentService) { }
@@ -34,12 +35,16 @@ export class CardDetailComponent implements OnInit {
 		
 
 		if(this.comment){
-			this.commentService.postComment(this.comment).subscribe(commentResult => {
+			this.commentService.postComment(this.comment).subscribe(
+				commentResult => {
 		      //to do show notification of successfully comment
-
+			
 		      //hide comment component
 		      this.newComment = false;
-		    });
+				},
+				(error) => console.error("error"),
+				() => { this.newCommentSave.next({"newCommentSave": true})}
+				);
 		}
 	}
 

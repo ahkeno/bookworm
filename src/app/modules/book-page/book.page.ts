@@ -1,4 +1,4 @@
-	import { Component,OnInit } from '@angular/core';
+	import { Component,OnInit,ChangeDetectorRef,OnChanges } from '@angular/core';
 	import { Router, ActivatedRoute, ParamMap} from '@angular/router';
 	import { Observable, of ,Subject,interval} from 'rxjs';
 	import { distinctUntilChanged, switchMap, catchError } from 'rxjs/operators';
@@ -16,8 +16,10 @@
 		book: any;
 		bookId: string;
 		commentDataWithId: any;
+		comments : any;
 
 		constructor(
+			private ref: ChangeDetectorRef,
 			private booksService: BooksService,
 			private commentService: CommentService,
 			private router : Router,
@@ -31,7 +33,7 @@
 		}
 		ngOnInit() {
 			this.loadBook();
-			this.loadComments();
+			this.getCommentWithId(this.bookId);
 		}
 
 		loadBook(){
@@ -39,20 +41,26 @@
 				this.book = dataBook;
 			} );
 		}
-
-		loadComments(){
-			this.commentService.getComments().subscribe(dataComments => {
-				this.commentDataWithId = this.getCommentWithId(dataComments,this.bookId);
-			} );
-		}
 		
-		getCommentWithId(comments, bookId) {
-			let commentList = comments.filter(comments => comments.bookid == bookId);
-  			return commentList;
+		getCommentWithId(bookId) {
+			this.commentService.getCommentbyId(bookId).subscribe
+			(dataComments => {
+				
+				this.commentDataWithId = dataComments;
+			} );
+
 		}
 		
 		onClickDashboard(){
 			this.router.navigate(['/']);
+		}
+
+		newCommentSave(event){
+			if(event.newCommentSave){
+				this.commentDataWithId = this.getCommentWithId( this.bookId);
+				this.ref.detectChanges();
+			}
+			
 		}
 
 	}
