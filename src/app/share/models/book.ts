@@ -4,5 +4,6 @@ export class Book {
     desription: string;
     author: string;
     image: string;
-    tag: Array<String>;
+    tag: string;
+    id: number;
 }
